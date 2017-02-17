@@ -67,6 +67,7 @@ export class BackgroundMode {
   })
   static enable(): void { }
 
+  
   /**
   * Disable the background mode.
   * Once the background mode has been disabled, the app will be paused when in background.
@@ -134,3 +135,14 @@ export class BackgroundMode {
   static onfailure(): Observable<any> { return; };
 
 }
+
+ /**
+  *
+  * Enable GPS-tracking in background (Android).
+  * Available only for Android platform.
+  */
+  @Cordova({
+    platforms: ['Android']
+  })
+  static disableWebViewOptimizations(): void { }
+
